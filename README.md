@@ -84,6 +84,18 @@ Leaving it connected will exhaust your remaining GPU time.
 
 ---
 
+## 📝 更新履歴 (Changelog)  
+
+### v4.2 (Current Release)  
+✅ txtを議事録に変更  
+✅ ダウンロードするファイルにsrtを追加  
+☑️ 軽微な修正  
+
+### v4.1  
+✅ 初リリース  
+
+---
+
 ## 🛡️ ライセンスについて (License)  
 
 このユーザースクリプトのソースコードは、ねおんが著作権を保有しています  
