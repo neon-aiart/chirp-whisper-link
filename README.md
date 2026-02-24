@@ -7,7 +7,8 @@ A simple Google Colab script to transcribe audio from YouTube URLs or local file
 ## 🚀 使い方 / How to Use  
 下のボタンを押してGoogle Colabで実行してください  
 Click the button below to open the script in Google Colab and start transcribing!  
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.1.ipynb)  
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.2.ipynb)  
 
 1. **ランタイムのタイプを変更 / Change Runtime Type**  
   上部メニューの「ランタイム」→「ランタイムのタイプを変更」からハードウェアを選択します  
@@ -86,12 +87,12 @@ Leaving it connected will exhaust your remaining GPU time.
 
 ## 📝 更新履歴 (Changelog)  
 
-### v4.2 (Current Release)  
+### [v4.2](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.2.ipynb) (Current Release)  
 ✅ txtを議事録に変更  
 ✅ ダウンロードするファイルにsrtを追加  
 ☑️ 軽微な修正  
 
-### v4.1  
+### [v4.1](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.1.ipynb)  
 ✅ 初リリース  
 
 ---
