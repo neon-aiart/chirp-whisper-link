@@ -2,6 +2,8 @@
 YouTube URLやローカルファイルから、Whisperを使って自動で文字起こしするシンプルなColabスクリプトです  
 A simple Google Colab script to transcribe audio from YouTube URLs or local files using Whisper.  
 
+⭐ [スター](https://github.com/neon-aiart/chirp-whisper-link/)をポチッとお願いします✨ (Please hit the [Star] button!)<br clear="right">  
+
 ---
 
 ## 🚀 使い方 / How to Use  
@@ -127,16 +129,16 @@ Leaving it connected will exhaust your remaining GPU time.
 ✅ 精度を改善  
 ☑️ condition_on_previous_textを削除 (trueで固定)  
 
-### [v4.3](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.3.ipynb)  
+### v4.3  
 ✅ Faster-Whisperに変更  
 ✅ 議事録のダウンロードをON/OFFに変更  
 
-### [v4.2](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.2.ipynb)  
+### v4.2  
 ✅ txtを議事録に変更  
 ✅ ダウンロードするファイルにsrtを追加  
 ☑️ 軽微な修正  
 
-### [v4.1](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.1.ipynb)  
+### v4.1  
 ✅ 初リリース  
 
 ---
