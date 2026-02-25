@@ -51,20 +51,49 @@ Click the button below to open the script in Google Colab and start transcribing
 
 * **initial_prompt**:  
   どんな内容か書くと、専門用語などの誤字が減りやすくなります  
-  (Writing a brief description of the content can help improve transcription accuracy for specific terms.)  
+  (Helps the AI recognize technical terms and specific context to improve accuracy.)  
 
 * **mode**:  
-  `Upload` (ローカルファイル) か `YouTube` (動画URL)  
+  `Upload`: パソコン内の音声・動画ファイルを読み込む (Process local files)  
+  `YouTube`: 動画のURLから音声を抽出 (Extract audio from URL)  
 
 * **youtube_url**:  
   YouTubeの動画リンク (YouTube video link)  
 
-* **condition_on_previous_text**:  
-  * **ON**: 前後の文脈を考慮します (Considers previous context.)  
-  * **OFF**: 前の間違いを引きずるのを防ぎます (Prevents carrying over errors from previous segments.)  
-
 * **records_text_download**:  
   議事録もダウンロード (Toggle to download timestamped transcript (.txt))  
+
+* **execute_file_exists**:  
+  * **ON**: フォルダ内に以前のファイルが残っている場合、**アップロードをスキップして最新のファイルを再利用**します (Reuses the latest file in the folder, **skipping the upload/download process**.)  
+  * **OFF**: ローカルファイルをアップロード、または、YouTubeから動画をダウンロードします (Uploads a local file or downloads from YouTube.)  
+
+### 🚀 効率化機能：既存ファイルの再利用 / Optimization: Reusing Existing Files  
+
+アップロード・ダウンロード済みの最新ファイルを再利用することで、パラメータ調整時の待ち時間を大幅に短縮できます  
+Reuse the most recently uploaded or downloaded file to significantly reduce wait times during parameter tuning.  
+
+#### 1. `mode`を`Upload`にする (switching `mode` to `Upload`)  
+  * **通常(Standard)**: `YouTube Download (60s)` + `Whisper (120s)` = **180sec**  
+  * **再利用モード(Reuse)**: `Whisper (120s)` only = **120秒（33% OFF!）**  
+
+#### 2. YouTube動画の「キャッシュ」利用テクニック / YouTube "Cache" Technique  
+長尺のYouTube動画で、Whisperのパラメータ（PromptやVAD設定など）を何度も試したい場合に有効です  
+Useful when testing Whisper parameters (Prompt, VAD settings, etc.) for long YouTube videos.  
+
+  1. 最初は `mode: YouTube` で実行し、動画をダウンロード・文字起こしします  
+     **Initial Run**: Set `mode: YouTube` to download and transcribe the video. 
+  2. 2回目以降は、以下のように設定して実行します  
+     **Subsequent Runs**: Configure the following settings:  
+    * **`mode`**: `Upload` に切り替え (Switch to `Upload`)  
+    * **`execute_file_exists`**: **ON** にする (**ON**)  
+  3. YouTubeからの再ダウンロードをスキップし、ローカルに保存された音声ファイルを直接読み込みます  
+     **Result**: Skips re-downloading and reads the locally saved audio file directly.  
+
+> [!TIP]  
+> YouTubeのダウンロードは音声抽出や変換に数十秒〜数分かかる場合があります  
+> この「キャッシュ利用」により、その待ち時間をゼロにできます  
+> YouTube downloads can take anywhere from tens of seconds to several minutes for audio extraction and conversion.  
+> This "Cache" technique reduces that wait time to zero.  
 
 ---
 
@@ -90,7 +119,15 @@ Leaving it connected will exhaust your remaining GPU time.
 
 ## 📝 更新履歴 (Changelog)  
 
-### [v4.3](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.3.ipynb) (Current Release)  
+### v4.5 (Current Release)  
+✅ 再利用可能に (execute_file_existsを追加)  
+☑️ languageをNoneに変更 (自動判定に任せる)  
+
+### v4.4 (UnReleased)  
+✅ 精度を改善  
+☑️ condition_on_previous_textを削除 (trueで固定)  
+
+### [v4.3](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.3.ipynb)  
 ✅ Faster-Whisperに変更  
 ✅ 議事録のダウンロードをON/OFFに変更  
 
