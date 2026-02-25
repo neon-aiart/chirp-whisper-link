@@ -1,4 +1,4 @@
-# 🐦 Chirp Whisper Link  
+# 🐦 Chirp Whisper Link v4.5  
 YouTube URLやローカルファイルから、Whisperを使って自動で文字起こしするシンプルなColabスクリプトです  
 A simple Google Colab script to transcribe audio from YouTube URLs or local files using Whisper.  
 
