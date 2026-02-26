@@ -29,7 +29,12 @@ Click the button below to open the script in Google Colab and start transcribing
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.5.ipynb)  
 
-![Chirp Whisper Link Screenshot](https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/chirp-whisper-link-screenshot.png)
+<details>
+<summary><b>📸 スクリーンショット / Interface Screenshot</b></summary>
+
+![Chirp Whisper Link Screenshot](chirp-whisper-link-screenshot.png)  
+
+</details>  
 
 1. **ランタイムのタイプを変更 / Change Runtime Type**  
   上部メニューの「ランタイム」→「ランタイムのタイプを変更」からハードウェアを選択します  
