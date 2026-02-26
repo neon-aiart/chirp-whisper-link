@@ -1,8 +1,25 @@
 # 🐦 Chirp Whisper Link v4.5  
+
+<img src="https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/00228-434673803.png" style="height: 200px; width: 200px; object-fit: contain;" align="right" alt="thumbnail" />  
+
 YouTube URLやローカルファイルから、Whisperを使って自動で文字起こしするシンプルなColabスクリプトです  
 A simple Google Colab script to transcribe audio from YouTube URLs or local files using Whisper.  
 
-⭐ [スター](https://github.com/neon-aiart/chirp-whisper-link/)をポチッとお願いします✨ (Please hit the [Star] button!)<br clear="right">  
+⭐ [スター](https://github.com/neon-aiart/chirp-whisper-link/)をポチッとお願いします✨ (Please hit the [Star] button!)
+
+<br clear="right">  
+
+---
+
+## ✨ 特徴 / Features  
+- **デュアルモード:** YouTube URLとローカルファイルの両方に対応  
+  **Dual Mode:** Support for both YouTube URLs and local file uploads.  
+- **自動ダウンロード:** 文字起こし結果を自動的に.txt形式で保存・ダウンロード  
+  **Auto-Download:** Automatically saves the transcription as a `.txt` file to your computer.  
+- **スマートロード:** モデルがロード済みかを自動判定し、待ち時間を短縮  
+  **Smart Loading:** Detects if the model is already loaded to save time.  
+- **完了通知音:** 処理が終わると「きらめき音」でお知らせ  
+  **Notification Sound:** Plays a "sparkle" sound when the task is complete.  
 
 ---
 
@@ -104,18 +121,6 @@ Useful when testing Whisper parameters (Prompt, VAD settings, etc.) for long You
 接続したまま放置すると、無料枠のGPU時間がすぐになくなってしまいます  
 **Please remember to "Disconnect and delete runtime" manually after use.**  
 Leaving it connected will exhaust your remaining GPU time.  
-
----
-
-## ✨ 特徴 / Features  
-- **デュアルモード:** YouTube URLとローカルファイルの両方に対応  
-  **Dual Mode:** Support for both YouTube URLs and local file uploads.  
-- **自動ダウンロード:** 文字起こし結果を自動的に.txt形式で保存・ダウンロード  
-  **Auto-Download:** Automatically saves the transcription as a `.txt` file to your computer.  
-- **スマートロード:** モデルがロード済みかを自動判定し、待ち時間を短縮  
-  **Smart Loading:** Detects if the model is already loaded to save time.  
-- **完了通知音:** 処理が終わると「きらめき音」でお知らせ  
-  **Notification Sound:** Plays a "sparkle" sound when the task is complete.  
 
 ---
 
