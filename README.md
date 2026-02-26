@@ -16,7 +16,7 @@ Click the button below to open the script in Google Colab and start transcribing
   上部メニューの「ランタイム」→「ランタイムのタイプを変更」からハードウェアを選択します  
   (Go to "Runtime" -> "Change runtime type" in the top menu.)  
    * **T4 GPU**: < おすすめ > 高速に処理できます (Recommended for high-speed processing.)  
-   * **CPU**: 時間がかかってもいい場合や、GPU枠を節約したい時に (Use this to save GPU quota if you don't mind it taking longer.)  
+   * **CPU**: 時間がかかってもいい場合や、GPU枠を節約したい時 (Use this to save GPU quota if you don't mind it taking longer.)  
 
 2. **ランタイムに接続 / Connect to Runtime**  
   右上の「接続」をクリックして準備します (Click "Connect" in the top right corner.)  
@@ -25,7 +25,7 @@ Click the button below to open the script in Google Colab and start transcribing
   **mode** を設定しますYouTubeなら `YouTube`、パソコン内のファイルなら `Upload` を選択  
 (Set the **mode**: select `YouTube` for URLs or `Upload` for local files.)  
 
-4. **URLの入力 (YouTubeの場合) / Enter URL (for YouTube)**  
+4. **URLの入力 (YouTubeモードの場合) / Enter URL (for YouTube Mode)**  
   **youtube_url** にURLを入力します (Enter the URL in the **youtube_url** field.)  
 
 5. **再生ボタンを押して実行 / Click the Play Button**  
