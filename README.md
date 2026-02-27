@@ -64,7 +64,7 @@ Click the button below to open the script in Google Colab and start transcribing
 <summary><b>📸 スクリーンショット / Interface Screenshot</b></summary>
 
 <p align="center">
-  <img src="chirp-whisper-link-screenshot.png" width="800" alt="Interface Screenshot">
+  <img src="chirp-whisper-link-screenshot.png" style="width: 800px; object-fit:" alt="Interface Screenshot">
 </p>
 
 </details>  
