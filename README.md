@@ -29,43 +29,45 @@ Click the button below to open the script in Google Colab and start transcribing
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.5.ipynb)  
 
-<details>
-<summary><b>📸 スクリーンショット / Interface Screenshot</b></summary>
-
-![Chirp Whisper Link Screenshot](chirp-whisper-link-screenshot.png)  
-
-</details>  
-
 1. **ランタイムのタイプを変更 / Change Runtime Type**  
   上部メニューの「ランタイム」→「ランタイムのタイプを変更」からハードウェアを選択します  
   (Go to "Runtime" -> "Change runtime type" in the top menu.)  
    * **T4 GPU**: < おすすめ > 高速に処理できます (Recommended for high-speed processing.)  
    * **CPU**: 時間がかかってもいい場合や、GPU枠を節約したい時 (Use this to save GPU quota if you don't mind it taking longer.)  
 
-1. **ランタイムに接続 / Connect to Runtime**  
+2. **ランタイムに接続 / Connect to Runtime**  
   右上の「接続」をクリックして準備します (Click "Connect" in the top right corner.)  
 
-1. **モードの選択 / Select Mode**  
+3. **モードの選択 / Select Mode**  
   **mode** を設定しますYouTubeなら `YouTube`、パソコン内のファイルなら `Upload` を選択  
 (Set the **mode**: select `YouTube` for URLs or `Upload` for local files.)  
 
-1. **URLの入力 (YouTubeモードの場合) / Enter URL (for YouTube Mode)**  
+4. **URLの入力 (YouTubeモードの場合) / Enter URL (for YouTube Mode)**  
   **youtube_url** にURLを入力します (Enter the URL in the **youtube_url** field.)  
 
-1. **再生ボタンを押して実行 / Click the Play Button**  
+5. **再生ボタンを押して実行 / Click the Play Button**  
   セルの左側にある再生ボタンをクリックして実行します (Click the Play button on the left side of the cell to start.)  
 
-1. **ファイルのアップロード (Uploadモードの場合) / Upload File (for Upload Mode)**  
+6. **ファイルのアップロード (Uploadモードの場合) / Upload File (for Upload Mode)**  
   途中で「ファイル選択」ボタンが表示されるので、ファイルを選択してください  
   (When the "Choose Files" button appears, select your audio file.)  
 
-1. **続けて実行する場合 / To Continue**  
+7. **続けて実行する場合 / To Continue**  
   手順3に戻り、設定を変更して再度再生ボタンを押します  
   (Go back to step 3, change settings, and click the Play button again.)  
 
-1. **終わったら接続解除 (ゼッタイ！) / Disconnect (Crucial!)**  
+8. **終わったら接続解除 (ゼッタイ！) / Disconnect (Crucial!)**  
   **「ランタイムを接続解除して削除」** を必ず行ってください  
   (Always select **"Disconnect and delete runtime"** when finished.)  
+
+<details>
+<summary><b>📸 スクリーンショット / Interface Screenshot</b></summary>
+
+<p align="center">
+  <img src="chirp-whisper-link-screenshot.png" width="800" alt="Interface Screenshot">
+</p>
+
+</details>  
 
 ---
 
