@@ -1,4 +1,4 @@
-# 🐦 Chirp Whisper Link v4.5  
+# 🐦 Chirp Whisper Link v4.6  
 
 <img src="https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/00228-434673803.png" style="height: 200px; width: 200px; object-fit: contain;" align="right" alt="thumbnail" />  
 
@@ -27,7 +27,7 @@ A simple Google Colab script to transcribe audio from YouTube URLs or local file
 下のボタンを押してGoogle Colabで実行してください  
 Click the button below to open the script in Google Colab and start transcribing!  
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.5.ipynb)  
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.6.ipynb)  
 
 1. **ランタイムのタイプを変更 / Change Runtime Type**  
   上部メニューの「ランタイム」→「ランタイムのタイプを変更」からハードウェアを選択します  
@@ -140,7 +140,10 @@ Leaving it connected will exhaust your remaining GPU time.
 
 ## 📝 更新履歴 (Changelog)  
 
-### [v4.5](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.5.ipynb) (Current Release)  
+### [v4.6](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.6.ipynb) (Current Release)  
+☑️ リトライを追加  
+
+### [v4.5](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.5.ipynb)  
 ✅ 再利用可能に (execute_file_existsを追加)  
 ☑️ languageをNoneに変更 (自動判定に任せる)  
 
