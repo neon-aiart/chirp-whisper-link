@@ -141,7 +141,7 @@ Leaving it connected will exhaust your remaining GPU time.
 ## 📝 更新履歴 (Changelog)  
 
 ### [v4.6](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.6.ipynb) (Current Release)  
-☑️ リトライを追加  
+☑️ YouTubeアクセスにリトライを追加  
 
 ### [v4.5](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.5.ipynb)  
 ✅ 再利用可能に (execute_file_existsを追加)  
