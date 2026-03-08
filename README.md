@@ -160,7 +160,7 @@ Leaving it connected will exhaust your remaining GPU time.
 
 ### [v4.7](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.7.ipynb) (Current Release)  
 ✅ condition_on_previous_textがなぜかFalseのままだったのでTrueに修正  
-✅ YouTubeモードを棚上げ (Shelved)
+✅ YouTubeモードを棚上げ (Shelved)  
 
 ### [v4.6](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.6.ipynb)  
 ☑️ YouTubeアクセスにリトライを追加  
