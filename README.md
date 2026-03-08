@@ -1,4 +1,4 @@
-# 🐦 Chirp Whisper Link v4.6  
+# 🐦 Chirp Whisper Link v4.7  
 
 <img src="https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/00228-434673803.png" style="height: 200px; width: 200px; object-fit: contain;" align="right" alt="thumbnail" />  
 
@@ -12,8 +12,8 @@ A simple Google Colab script to transcribe audio from YouTube URLs or local file
 ---
 
 ## ✨ 特徴 / Features  
-- **デュアルモード:** YouTube URLとローカルファイルの両方に対応  
-  **Dual Mode:** Support for both YouTube URLs and local file uploads.  
+- ~~**デュアルモード:** YouTube URLとローカルファイルの両方に対応~~  
+  ~~**Dual Mode:** Support for both YouTube URLs and local file uploads.~~  
 - **自動ダウンロード:** 文字起こし結果を自動的に.txt形式で保存・ダウンロード  
   **Auto-Download:** Automatically saves the transcription as a `.txt` file to your computer.  
 - **スマートロード:** モデルがロード済みかを自動判定し、待ち時間を短縮  
@@ -27,7 +27,7 @@ A simple Google Colab script to transcribe audio from YouTube URLs or local file
 下のボタンを押してGoogle Colabで実行してください  
 Click the button below to open the script in Google Colab and start transcribing!  
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.6.ipynb)  
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.7.ipynb)  
 
 1. **ランタイムのタイプを変更 / Change Runtime Type**  
   上部メニューの「ランタイム」→「ランタイムのタイプを変更」からハードウェアを選択します  
@@ -40,7 +40,7 @@ Click the button below to open the script in Google Colab and start transcribing
 
 3. **モードの選択 / Select Mode**  
   **mode** を設定しますYouTubeなら `YouTube`、パソコン内のファイルなら `Upload` を選択  
-(Set the **mode**: select `YouTube` for URLs or `Upload` for local files.)  
+  (Set the **mode**: select `YouTube` for URLs or `Upload` for local files.)  
 
 4. **URLの入力 (YouTubeモードの場合) / Enter URL (for YouTube Mode)**  
   **youtube_url** にURLを入力します (Enter the URL in the **youtube_url** field.)  
@@ -130,6 +130,24 @@ Useful when testing Whisper parameters (Prompt, VAD settings, etc.) for long You
 
 ---
 
+## ⚠️ YouTubeモードの提供一時休止について  
+
+現在、YouTube側のセキュリティ強化（Bot検知やPO Tokenの導入）により、外部ツールからの直接ダウンロードが非常に不安定になっています  
+
+ユーザーの皆様のアカウントの安全を第一に考え、本ツールではYouTube直接指定モードを **「Shelved（棚上げ）」** とし、標準UIからは非表示に設定しました  
+
+お手数ですが、YouTubeの音声を文字起こししたい場合は、あらかじめご自身で音声ファイルを準備し、**「Upload」モード**にてご利用ください  
+
+## ⚠️ Regarding the Temporary Suspension of YouTube Mode  
+
+Currently, direct downloading from YouTube has become extremely unstable due to enhanced security measures (such as Bot detection and the introduction of PO Tokens).  
+
+To prioritize the security of our users' accounts, the YouTube direct mode in this tool has been **"Shelved"** and is hidden from the standard UI.  
+
+If you wish to transcribe audio from YouTube, please prepare the audio file yourself in advance and use the **"Upload" mode**.  
+
+---
+
 ## ⚠️ 注意事項 / Important  
 ファイルがダウンロードされたら、必ず手動で **「ランタイムを接続解除」** してください  
 接続したまま放置すると、無料枠のGPU時間がすぐになくなってしまいます  
@@ -140,10 +158,14 @@ Leaving it connected will exhaust your remaining GPU time.
 
 ## 📝 更新履歴 (Changelog)  
 
-### [v4.6](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.6.ipynb) (Current Release)  
+### [v4.7](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.7.ipynb) (Current Release)  
+✅ condition_on_previous_textがなぜかFalseのままだったのでTrueに修正  
+✅ YouTubeモードを棚上げ (Shelved)
+
+### [v4.6](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.6.ipynb)  
 ☑️ YouTubeアクセスにリトライを追加  
 
-### [v4.5](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.5.ipynb)  
+### v4.5  
 ✅ 再利用可能に (execute_file_existsを追加)  
 ☑️ languageをNoneに変更 (自動判定に任せる)  
 
@@ -167,8 +189,8 @@ Leaving it connected will exhaust your remaining GPU time.
 
 ## 🛡️ ライセンスについて (License)  
 
-このユーザースクリプトのソースコードは、ねおんが著作権を保有しています  
-The source code for this application is copyrighted by Neon.  
+このノートブックのソースコードは、ねおんが著作権を保有しています  
+The source code for this notebook is copyrighted by Neon.  
 
 * **ライセンス / License**: **[PolyForm Noncommercial 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0/)** です（LICENSEファイルをご参照ください）  
   Licensed under PolyForm Noncommercial 1.0.0. (Please refer to the LICENSE file for details.)  
@@ -176,8 +198,8 @@ The source code for this application is copyrighted by Neon.
   * 営利目的での利用、無断転載、クレジットの削除は固く禁じます  
     Commercial use, unauthorized re-uploading, and removal of author credits are strictly prohibited.  
 * **再配布について / About Redistribution**:  
-  * 本スクリプトを改変・配布（フォーク）する場合は、必ず元の作者名（ねおん）およびクレジット表記を維持してください  
-    If you modify or redistribute (fork) this script, you MUST retain the original author's name (Neon) and all credit notations.  
+  * 本プロジェクトを改変・配布（フォーク）する場合は、必ず元の作者名（ねおん）およびクレジット表記を維持してください  
+    If you modify or redistribute (fork) this project, you MUST retain the original author's name (Neon) and all credit notations.  
 
 ※ ご利用は自己責任でお願いします（悪用できるようなものではないですが、念のため！）  
 
@@ -186,8 +208,8 @@ The source code for this application is copyrighted by Neon.
 ## ⚠️ セキュリティ警告 / Security Warning  
 
 🚨 **重要：公式配布について / IMPORTANT: Official Distribution**  
-当プロジェクトの公式スクリプトは、**GitHub または GreasyFork** でのみ公開しています。  
-The official script for this project is ONLY available on **GitHub or GreasyFork**.  
+当プロジェクトの公式ノートブックは、**GitHub** でのみ公開しています。  
+The official notebook for this project is ONLY available on **GitHub**.  
 
 🚨 **偽物に注意 / Beware of Fakes**  
 他サイト等で `.zip`, `.exe`, `.cmd` 形式で配布されているものはすべて**偽物**です。  
