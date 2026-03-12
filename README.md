@@ -1,9 +1,9 @@
-# 🐦 Chirp Whisper Link v4.7  
+# 🐦 Chirp Whisper Link v4.8  
 
 <img src="https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/00228-434673803.png" style="height: 200px; width: 200px; object-fit: contain;" align="right" alt="thumbnail" />  
 
-YouTube URLやローカルファイルから、Whisperを使って自動で文字起こしするシンプルなColabスクリプトです  
-A simple Google Colab script to transcribe audio from YouTube URLs or local files using Whisper.  
+ローカルファイルやGoogleDriveから、Whisperを使って自動で文字起こしするシンプルなColabスクリプトです  
+A simple Google Colab script to transcribe audio from local files or GoogleDrive using Whisper.  
 
 ⭐ [スター](https://github.com/neon-aiart/chirp-whisper-link/)をポチッとお願いします✨ (Please hit the [Star] button!)
 
@@ -12,8 +12,9 @@ A simple Google Colab script to transcribe audio from YouTube URLs or local file
 ---
 
 ## ✨ 特徴 / Features  
-- ~~**デュアルモード:** YouTube URLとローカルファイルの両方に対応~~  
-  ~~**Dual Mode:** Support for both YouTube URLs and local file uploads.~~  
+
+- **デュアルモード:** ローカルファイルとGoogleDriveに対応  
+  **Dual Mode:** Support for both local file uploads and GoogleDrive.  
 - **自動ダウンロード:** 文字起こし結果を自動的に.txt形式で保存・ダウンロード  
   **Auto-Download:** Automatically saves the transcription as a `.txt` file to your computer.  
 - **スマートロード:** モデルがロード済みかを自動判定し、待ち時間を短縮  
@@ -24,10 +25,11 @@ A simple Google Colab script to transcribe audio from YouTube URLs or local file
 ---
 
 ## 🚀 使い方 / How to Use  
+
 下のボタンを押してGoogle Colabで実行してください  
 Click the button below to open the script in Google Colab and start transcribing!  
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.7.ipynb)  
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.8.ipynb)  
 
 1. **ランタイムのタイプを変更 / Change Runtime Type**  
   上部メニューの「ランタイム」→「ランタイムのタイプを変更」からハードウェアを選択します  
@@ -39,11 +41,11 @@ Click the button below to open the script in Google Colab and start transcribing
   右上の「接続」をクリックして準備します (Click "Connect" in the top right corner.)  
 
 3. **モードの選択 / Select Mode**  
-  **mode** を設定しますYouTubeなら `YouTube`、パソコン内のファイルなら `Upload` を選択  
-  (Set the **mode**: select `YouTube` for URLs or `Upload` for local files.)  
+  **mode** を設定します: パソコン内のファイルなら `Upload` 、GoogleDriveなら `GoogleDrive`を選択  
+  (Set the **mode**: select `Upload` for local files or `GoogleDrive` for GoogleDrive.)  
 
-4. **URLの入力 (YouTubeモードの場合) / Enter URL (for YouTube Mode)**  
-  **youtube_url** にURLを入力します (Enter the URL in the **youtube_url** field.)  
+4. **フォルダー名を入力 (GoogleDriveモード) / Enter Folder Name (for GoogleDrive Mode)**  
+  **drive_folder** にフォルダー名を入力します (Enter the folder name in the **drive_folder** field.)  
 
 5. **再生ボタンを押して実行 / Click the Play Button**  
   セルの左側にある再生ボタンをクリックして実行します (Click the Play button on the left side of the cell to start.)  
@@ -83,19 +85,20 @@ Click the button below to open the script in Google Colab and start transcribing
 
 * **mode**:  
   `Upload`: パソコン内の音声・動画ファイルを読み込む (Process local files)  
-    &emsp;※ `youtube_url`は無視されます (`youtube_url` is ignored)  
-  `YouTube`: 動画のURLから音声を抽出 (Extract audio from URL)  
+    &emsp;※ `drive_folder`は無視されます (`drive_folder` is ignored)  
+  `GoogleDrive`: GoogleDriveにあるファイルから音声を抽出 (Extract from GoogleDrive)  
     &emsp;※ `execute_file_exists`は無視されます (`execute_file_exists` is ignored)  
+  `YouTube`: ※ 現在、機能停止中です（Currently unavailable）  
 
-* **youtube_url**:  
-  YouTubeの動画リンク (YouTube video link)  
+* **drive_folder**:  
+  GoogleDriveのフォルダ (GoogleDrive folder)  
     &emsp;※ `mode`が`Upload`のときは無視されます (`mode: Upload` ignores this)  
 
 * **execute_file_exists**:  
   * **ON**: フォルダ内に以前のファイルが残っている場合、**アップロードをスキップして最新のファイルを再利用**します (Reuses the latest file in the folder, **skipping the upload/download process**.)  
-  * **OFF**: ローカルファイルをアップロード、または、YouTubeから動画をダウンロードします (Uploads a local file or downloads from YouTube.)  
+  * **OFF**: 新しくファイルをアップロードします (Uploads a local file.)  
 
-  &emsp;※ `mode`が`YouTube`のときは無視されます (`mode: YouTube` ignores this)  
+  &emsp;※ `mode`が`GoogleDrive`のときは無視されます (`mode: GoogleDrive` ignores this)  
 
 * **records_text_download**:  
   議事録もダウンロード (Toggle to download timestamped transcript (.txt))  
@@ -105,50 +108,43 @@ Click the button below to open the script in Google Colab and start transcribing
 アップロード・ダウンロード済みの最新ファイルを再利用することで、パラメータ調整時の待ち時間を大幅に短縮できます  
 Reuse the most recently uploaded or downloaded file to significantly reduce wait times during parameter tuning.  
 
-#### 1. `mode`を`Upload`にする (switching `mode` to `Upload`)  
-  * **通常(Standard)**: `YouTube Download (60s)` + `Whisper (120s)` = **180sec**  
-  * **再利用モード(Reuse)**: `Whisper (120s)` only = **120秒（33% OFF!）**  
+#### `mode`を`Upload`にする (switching `mode` to `Upload`)  
 
-#### 2. YouTube動画の「キャッシュ」利用テクニック / YouTube "Cache" Technique  
-長尺のYouTube動画で、Whisperのパラメータ（PromptやVAD設定など）を何度も試したい場合に有効です  
-Useful when testing Whisper parameters (Prompt, VAD settings, etc.) for long YouTube videos.  
-
-  1. 最初は `mode: YouTube` で実行し、動画をダウンロード・文字起こしします  
-     **Initial Run**: Set `mode: YouTube` to download and transcribe the video. 
-  2. 2回目以降は、以下のように設定して実行します  
-     **Subsequent Runs**: Configure the following settings:  
-    * **`mode`**: `Upload` に切り替え (Switch to `Upload`)  
-    * **`execute_file_exists`**: **ON** にする (**ON**)  
-  3. YouTubeからの再ダウンロードをスキップし、ローカルに保存された音声ファイルを直接読み込みます  
-     **Result**: Skips re-downloading and reads the locally saved audio file directly.  
-
-> [!TIP]  
-> YouTubeのダウンロードは音声抽出や変換に数十秒〜数分かかる場合があります  
-> この「キャッシュ利用」により、その待ち時間をゼロにできます  
-> YouTube downloads can take anywhere from tens of seconds to several minutes for audio extraction and conversion.  
-> This "Cache" technique reduces that wait time to zero.  
+* **通常(Standard)**: `File Upload (60s)` + `Whisper (120s)` = **180sec**  
+* **再利用モード(Reuse)**: `Whisper (120s)` only = **120sec (33% OFF!)**  
 
 ---
 
 ## ⚠️ YouTubeモードの提供一時休止について  
 
-現在、YouTube側のセキュリティ強化（Bot検知やPO Tokenの導入）により、外部ツールからの直接ダウンロードが非常に不安定になっています  
+現在、YouTube側のセキュリティ強化（Bot検知やPO Tokenの導入）により、外部ツールからの直接ダウンロードが非常に不安定になっています。  
 
-ユーザーの皆様のアカウントの安全を第一に考え、本ツールではYouTube直接指定モードを **「Shelved（棚上げ）」** とし、標準UIからは非表示に設定しました  
+ユーザーの皆様のアカウントの安全を第一に考え、本ツールでは**YouTube URLによる直接指定機能を一時停止（Shelved）** しています。  
 
-お手数ですが、YouTubeの音声を文字起こししたい場合は、あらかじめご自身で音声ファイルを準備し、**「Upload」モード**にてご利用ください  
+現在は以下の2つのモードを推奨しています：  
+
+- **Uploadモード**: ローカルにある音声ファイルを直接アップロードして利用
+- **GoogleDriveモード**: GoogleDrive内の指定フォルダ（デフォルトは `Whisper`）にあるファイルを利用  
+
+YouTubeの音声を文字起こししたい場合は、あらかじめご自身で音声ファイルを準備し、上記いずれかのモードでご利用ください。  
 
 ## ⚠️ Regarding the Temporary Suspension of YouTube Mode  
 
-Currently, direct downloading from YouTube has become extremely unstable due to enhanced security measures (such as Bot detection and the introduction of PO Tokens).  
+Due to enhanced YouTube security measures (Bot detection, PO Tokens, etc.), direct downloads via external tools are currently unstable.  
 
-To prioritize the security of our users' accounts, the YouTube direct mode in this tool has been **"Shelved"** and is hidden from the standard UI.  
+To ensure account safety, the **YouTube URL input functionality is currently suspended (Shelved)**.  
 
-If you wish to transcribe audio from YouTube, please prepare the audio file yourself in advance and use the **"Upload" mode**.  
+We recommend using one of the following modes:  
+
+- **Upload Mode**: Upload audio files directly from your local machine.  
+- **GoogleDrive Mode**: Use files stored in a specific GoogleDrive folder (default: `Whisper`).  
+
+If you wish to transcribe YouTube content, please prepare the audio file in advance and use the "Upload" or "GoogleDrive" mode.  
 
 ---
 
 ## ⚠️ 注意事項 / Important  
+
 ファイルがダウンロードされたら、必ず手動で **「ランタイムを接続解除」** してください  
 接続したまま放置すると、無料枠のGPU時間がすぐになくなってしまいます  
 **Please remember to "Disconnect and delete runtime" manually after use.**  
@@ -158,31 +154,43 @@ Leaving it connected will exhaust your remaining GPU time.
 
 ## 📝 更新履歴 (Changelog)  
 
-### [v4.7](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.7.ipynb) (Current Release)  
+### [v4.8](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.8.ipynb) (Current Release)  
+
+✅ GoogleDriveからファイル選択を仮実装  
+✅ 長いファイル名でエラーになって保存できなかったのを修正  
+
+### [v4.7](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.7.ipynb)  
+
 ✅ condition_on_previous_textがなぜかFalseのままだったのでTrueに修正  
 ✅ YouTubeモードを棚上げ (Shelved)  
 
 ### [v4.6](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.6.ipynb)  
+
 ☑️ YouTubeアクセスにリトライを追加  
 
 ### v4.5  
+
 ✅ 再利用可能に (execute_file_existsを追加)  
 ☑️ languageをNoneに変更 (自動判定に任せる)  
 
 ### v4.4 (UnReleased)  
+
 ✅ 精度を改善  
 ☑️ condition_on_previous_textを削除 (trueで固定)  
 
 ### v4.3  
+
 ✅ Faster-Whisperに変更  
 ✅ 議事録のダウンロードをON/OFFに変更  
 
 ### v4.2  
+
 ✅ txtを議事録に変更  
 ✅ ダウンロードするファイルにsrtを追加  
 ☑️ 軽微な修正  
 
 ### v4.1  
+
 ✅ 初リリース  
 
 ---
@@ -212,12 +220,14 @@ The source code for this notebook is copyrighted by Neon.
 The official notebook for this project is ONLY available on **GitHub**.  
 
 🚨 **偽物に注意 / Beware of Fakes**  
-他サイト等で `.zip`, `.exe`, `.cmd` 形式で配布されているものはすべて**偽物**です。  
-これらには**ウイルスやマルウェア**が含まれていることが確認されており、非常に危険です。  
-Any distribution in `.zip`, `.exe`, `.cmd` formats on other sites is **FAKE**.  
-These have been confirmed to contain **VIRUSES or MALWARE**.  
+
+* 他サイト等で `.zip`, `.exe`, `.cmd` 形式で配布されているものはすべて**偽物**です。  
+  これらには**ウイルスやマルウェア**が含まれていることが確認されており、非常に危険です。  
+* Any distribution in `.zip`, `.exe`, `.cmd` formats on other sites is **FAKE**.  
+  These have been confirmed to contain **VIRUSES or MALWARE**.  
 
 ### ⚖️ 法的措置と通報について / Legal Action & Abuse Reports  
+
 当プロジェクトの制作物に対する無断転載が確認されたため、過去に **DMCA Take-down通知** を送付しています。  
 また、マルウェアを配布する悪質なサイトについては、順次 **各機関へ通報 (Malware / Abuse Report)** を行っています。  
 We have filed **DMCA Take-down notices** against unauthorized re-uploads of my projects.  
@@ -233,6 +243,7 @@ Furthermore, we are actively submitting **Malware / Abuse Reports** to relevant 
 <img src="https://www.google.com/s2/favicons?domain=github.com&size=16" alt="GitHub icon"> GitHub        :<a href="https://github.com/neon-aiart/">https://github.com/neon-aiart/</a>
 <img src="https://neon-aiart.github.io/favicon.ico" alt="neon-aiart icon" width="16" height="16"> GitHub Pages  :<a href="https://neon-aiart.github.io/">https://neon-aiart.github.io/</a>
 <img src="https://www.google.com/s2/favicons?domain=greasyfork.org&size=16" alt="Greasy Fork icon"> Greasy Fork   :<a href="https://greasyfork.org/ja/users/1494762/">https://greasyfork.org/ja/users/1494762/</a>
+<img src="https://www.google.com/s2/favicons?domain=zenn.dev&size=16" alt="Sizu icon"> Zenn Dev      :<a href="https://zenn.dev/neon_aiart/">https://zenn.dev/neon_aiart/</a>
 <img src="https://www.google.com/s2/favicons?domain=sizu.me&size=16" alt="Sizu icon"> Sizu Diary    :<a href="https://sizu.me/neon_aiart/">https://sizu.me/neon_aiart/</a>
 <img src="https://www.google.com/s2/favicons?domain=ofuse.me&size=16" alt="Ofuse icon"> Ofuse         :<a href="https://ofuse.me/neon/">https://ofuse.me/neon/</a>
 <img src="https://www.google.com/s2/favicons?domain=www.chichi-pui.com&size=16" alt="chichi-pui icon"> chichi-pui    :<a href="https://www.chichi-pui.com/users/neon/">https://www.chichi-pui.com/users/neon/</a>
