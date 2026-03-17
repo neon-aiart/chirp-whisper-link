@@ -137,7 +137,8 @@ Setup is required to enable the "Pre-reading" feature using Gemini 3 Flash.
 3. **追加**: 名前を `GEMINI_API_KEY` とし、値を貼り付けます  
 4. **許可**: 「ノートブックからのアクセス」のチェックを **ON** にしてください  
 
-> [!TIP] APIキーがなくても動作します  
+> [!TIP]  
+> APIキーがなくても動作します  
 > キーが設定されていない場合、Geminiによる抽出プロセスのみがスキップされ、通常のWhisper文字起こしとして動作します  
 
 ### 🇺🇸  
@@ -147,7 +148,8 @@ Setup is required to enable the "Pre-reading" feature using Gemini 3 Flash.
 3. **Add Secret**: Set the Name to `GEMINI_API_KEY` and paste your key into the Value.  
 4. **Grant Access**: Toggle the "Notebook access" switch to **ON**.  
 
-> [!TIP] Works without an API Key  
+> [!TIP]  
+> Works without an API Key  
 > If no key is set, the Gemini extraction process is skipped, and the tool functions as a standard Whisper transcription.  
 
 ---
