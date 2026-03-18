@@ -342,6 +342,10 @@ Leaving it connected will exhaust your remaining GPU time.
 
 ## 📝 更新履歴 (Changelog)  
 
+### [v5.0](https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/chirp-whisper-link%20v5.0.ipynb) (Unrelease)  
+
+✅ ローカルランタイム接続に対応  
+
 ### v4.9 (Current Release)  
 
 ✅ initial_promptが空欄の場合はGeminiで自動補完  
