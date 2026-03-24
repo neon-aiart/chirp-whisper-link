@@ -340,6 +340,29 @@ Leaving it connected will exhaust your remaining GPU time.
 
 ---
 
+### 📺 紹介動画 (Overview Video)  
+
+<p align="center"><a href="https://youtu.be/5DH67rR95xo" markdown="1">
+    <img src="https://img.youtube.com/vi/5DH67rR95xo/maxresdefault.jpg" alt="Chirp Whisper Link Overview" style="width:100%; max-width:600px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><br />
+    ▶️ クリックしてYouTubeで再生 (Click to play on YouTube)
+</a></p>  
+
+## 🎨 インフォグラフィック (Infographic)  
+
+<details><summary>
+    🇯🇵 日本語版を表示 (View Japanese Version)
+</summary>
+<img src="chirp-whisper-link-info-jp.png" alt="Infographic JP" width="100%">
+</details>
+
+<details><summary>
+    🇺🇸 English Version (View English Version)
+</summary>
+<img src="chirp-whisper-link-info-en.png" alt="Infographic EN" width="100%">
+</details>
+
+---
+
 ## 📝 更新履歴 (Changelog)  
 
 ### [v5.0](https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/chirp-whisper-link%20v5.0.ipynb) (Unrelease)  
