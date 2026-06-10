@@ -337,6 +337,14 @@ If you wish to transcribe YouTube content, please prepare the audio file in adva
 Please remember to **"Disconnect and delete runtime"** manually after use.  
 Leaving it connected will exhaust your remaining GPU time.  
 
+## ⚠️ ローカルでの動作について / Local Environment Support  
+
+v5.0のアップデートでコード上はローカル環境に対応したはずだけれど  
+ねおんはローカルにインストールしていないので実際の動作は未確認です  
+
+As of v5.0, the codebase has been updated to support local environments.  
+However, this has not been fully verified yet since I do not have a local setup installed.  
+
 ---
 
 ### 📺 紹介動画 (Overview Video)  
