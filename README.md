@@ -1,4 +1,4 @@
-# 🐦 Chirp Whisper Link v4.9  
+# 🐦 Chirp Whisper Link v5.1  
 
 <img src="https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/00228-434673803.png" style="height: 200px; width: 200px; object-fit: contain;" align="right" alt="thumbnail" />  
 
@@ -17,7 +17,7 @@ The Ultimate **AI-to-AI Hybrid Transcription** Tool! A master-class Colab notebo
 ### 🇯🇵
 
 * **🔗 ハイブリッド・AI・ワークフロー**  
-  文字起こし前に **Gemini 3 Flash** が音声を「下読み」し、固有名詞や専門用語を自動抽出  
+  文字起こし前に **Gemini 3.5 Flash** が音声を「下読み」し、固有名詞や専門用語を自動抽出  
   Whisperの性能を最大限に引き出し、固有名詞の誤変換を劇的に改善します  
 
 * **🚀 爆速 Google Drive 連携**  
@@ -39,7 +39,7 @@ The Ultimate **AI-to-AI Hybrid Transcription** Tool! A master-class Colab notebo
 ### 🇺🇸
 
 * **🔗 Hybrid AI Workflow**  
-  **Gemini 3 Flash** "pre-reads" the audio to extract proper nouns and technical terms before transcription.  
+  **Gemini 3.5 Flash** "pre-reads" the audio to extract proper nouns and technical terms before transcription.  
   This maximizes Whisper's performance and drastically improves the accuracy of proper noun conversion.  
 * **🚀 High-Speed Google Drive Integration**  
   Features fast loading into Colab and automatic batch processing of unprocessed files.  
@@ -127,8 +127,8 @@ Click the button below to open the script in Google Colab and start transcribing
 
 ## 🔑 Gemini API キーの設定 / API Key Setup  
 
-Gemini 3 Flash による「下読み」機能を有効にするために設定が必要です  
-Setup is required to enable the "Pre-reading" feature using Gemini 3 Flash.  
+Gemini 3.5 Flash による「下読み」機能を有効にするために設定が必要です  
+Setup is required to enable the "Pre-reading" feature using Gemini 3.5 Flash.  
 
 ### 🇯🇵  
 
@@ -227,11 +227,10 @@ Setup is required to enable the "Pre-reading" feature using Gemini 3 Flash.
   * **`turbo`**: 早くしてほしい時に  
   * **`large-v3`**: ガンバってほしい時に  
   * **`Kotoba-Whisper`**: `turbo`をベースにした高速・軽量な日本語特化モデル  
-  * **`Distil-Whisper`**: `large-v3` をベースにした推論速度向上版  
 
 * **`initial_prompt`**  
   特定の固有名詞や専門用語の認識、句読点、漢字の変換ミスを防ぐために事前に伝えるヒント  
-  * **空欄の場合**: **Gemini 3 Flash** が音声を下読みし、最適なプロンプトを自動生成（APIキーが必要）  
+  * **空欄の場合**: **Gemini 3.5 Flash** が音声を下読みし、最適なプロンプトを自動生成（APIキーが必要）  
 
 #### 🇺🇸  
 
@@ -240,10 +239,10 @@ Setup is required to enable the "Pre-reading" feature using Gemini 3 Flash.
   * **`turbo`**: Use when you want it fast.  
   * **`large-v3`**: Use when you want the best possible accuracy.  
   * **`Kotoba-Whisper`**: High-speed, lightweight model optimized for Japanese.  
-  * **`Distil-Whisper`**: A distilled version of `large-v3` with faster inference speed.  
+
 * **`initial_prompt`**  
   A prompt provided in advance to improve recognition of proper nouns, technical terms, and punctuation.  
-  * **If empty**: **Gemini 3 Flash** analyzes the audio and automatically generates the optimal prompt (Requires API key).  
+  * **If empty**: **Gemini 3.5 Flash** analyzes the audio and automatically generates the optimal prompt (Requires API key).  
 
 ### 🔄 動作モード (Mode)  
 
@@ -365,11 +364,17 @@ Leaving it connected will exhaust your remaining GPU time.
 
 ## 📝 更新履歴 (Changelog)  
 
+### v5.1 (Current Release)  
+
+✅ GoogleDrive連携が使えなくなっていたのを修正  
+✅ `gemini-3-flash-preview`から`gemini-3.5-flash`に変更  
+☑️ モデルから `faster-distil-whisper-large-v3` を削除  
+
 ### [v5.0](https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/chirp-whisper-link%20v5.0.ipynb) (Unrelease)  
 
 ✅ ローカルランタイム接続に対応  
 
-### v4.9 (Current Release)  
+### [v4.9](https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/chirp-whisper-link%20v4.9.ipynb)  
 
 ✅ initial_promptが空欄の場合はGeminiで自動補完  
 ✅ モデルに `auto`, `faster-distil-whisper-large-v3`, `kotoba-whisper-v2.0-faster` を追加  
