@@ -61,7 +61,7 @@ The Ultimate **AI-to-AI Hybrid Transcription** Tool! A master-class Colab notebo
 下のボタンを押してGoogle Colabで実行してください  
 Click the button below to open the script in Google Colab and start transcribing!  
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.9.ipynb)  
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v5.1.ipynb)  
 
 ### 🇯🇵
 
