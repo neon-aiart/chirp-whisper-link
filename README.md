@@ -378,7 +378,7 @@ However, this has not been fully verified yet since I do not have a local setup 
 ✅ `gemini-3-flash-preview`から`gemini-3.5-flash`に変更  
 ☑️ モデルから `faster-distil-whisper-large-v3` を削除  
 
-### [v5.0](https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/chirp-whisper-link%20v5.0.ipynb) (Unrelease)  
+### v5.0 (Unrelease)  
 
 ✅ ローカルランタイム接続に対応  
 
