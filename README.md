@@ -1,4 +1,4 @@
-# 🐦 Chirp Whisper Link v5.1  
+# 🐦 Chirp Whisper Link v5.2  
 
 <img src="https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/00228-434673803.png" style="height: 200px; width: 200px; object-fit: contain;" align="right" alt="thumbnail" />  
 
@@ -257,6 +257,9 @@ Setup is required to enable the "Pre-reading" feature using Gemini 3.5 Flash.
 * **`execute_file_exists`** (Uploadモード専用)  
   * **ON**: アップロード済みの最新ファイルを再利用します  
   * **OFF**: 常に新しいファイルをアップロードします  
+* **`condition_on_previous_text`**: 前の文脈を引き継いで処理します  
+  > [!Warning] (2026年6月時点)  
+    `kotoba-whisper-v2.0-faster`を使用する際に`condition_on_previous_text`を`True`にすると、仕様変更による競合で文字起こしが正常に生成されない問題が確認されているので`False`推奨です  
 
 #### 🇺🇸  
 
@@ -268,6 +271,9 @@ Setup is required to enable the "Pre-reading" feature using Gemini 3.5 Flash.
 * **`execute_file_exists`** (Upload mode only):  
   * **ON**: Reuses the most recently uploaded file.  
   * **OFF**: Always prompts for a new file upload.  
+* **`condition_on_previous_text`**: Feeds the previous text as context for the next window.  
+  > [!WARNING] (As of June 2026)  
+    Using `kotoba-whisper-v2.0-faster` with `condition_on_previous_text` set to `True` causes a conflict due to internal updates, which prevents proper transcription. Setting it to `False` is highly recommended.
 
 ### 📄 出力オプション (Outputs Options)  
 
@@ -372,7 +378,12 @@ However, this has not been fully verified yet since I do not have a local setup 
 
 ## 📝 更新履歴 (Changelog)  
 
-### [v5.1](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v5.1.ipynb) (Current Release)  
+### [v5.2](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v5.2.ipynb) (Current Release)  
+
+✅ `kotoba-whisper-v2.0-faster`で文字起こしできなくなっていたのを修正  
+✅ `condition_on_previous_text`を固定からチェックボックスにして`False`に変更  
+
+### v5.1  
 
 ✅ GoogleDrive連携が使えなくなっていたのを修正  
 ✅ `gemini-3-flash-preview`から`gemini-3.5-flash`に変更  
