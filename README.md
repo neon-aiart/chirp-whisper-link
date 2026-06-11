@@ -271,7 +271,7 @@ Setup is required to enable the "Pre-reading" feature using Gemini 3.5 Flash.
   * **ON**: Reuses the most recently uploaded file.  
   * **OFF**: Always prompts for a new file upload.  
 * **`condition_on_previous_text`**: Feeds the previous text as context for the next window.
-  * ⚠️ **IMPORTANT (As of June 2026)**: Using `kotoba-whisper-v2.0-faster` with `condition_on_previous_text` set to `True` causes a conflict due to internal updates, which prevents proper transcription. Setting it to `False` is highly recommended.
+  * ⚠️ **IMPORTANT (As of June 2026)**: Using `kotoba-whisper-v2.0-faster` with `condition_on_previous_text` set to `True` causes a conflict due to internal updates, which prevents proper transcription. Setting it to `False` is highly recommended.  
 
 ### 📄 出力オプション (Outputs Options)  
 
