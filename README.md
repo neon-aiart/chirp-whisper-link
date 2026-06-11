@@ -372,7 +372,7 @@ However, this has not been fully verified yet since I do not have a local setup 
 
 ## 📝 更新履歴 (Changelog)  
 
-### v5.1 (Current Release)  
+### [v5.1](https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/chirp-whisper-link%20v5.1.ipynb) (Current Release)  
 
 ✅ GoogleDrive連携が使えなくなっていたのを修正  
 ✅ `gemini-3-flash-preview`から`gemini-3.5-flash`に変更  
