@@ -372,7 +372,7 @@ However, this has not been fully verified yet since I do not have a local setup 
 
 ## 📝 更新履歴 (Changelog)  
 
-### [v5.1](https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/chirp-whisper-link%20v5.1.ipynb) (Current Release)  
+### [v5.1](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v5.1.ipynb) (Current Release)  
 
 ✅ GoogleDrive連携が使えなくなっていたのを修正  
 ✅ `gemini-3-flash-preview`から`gemini-3.5-flash`に変更  
@@ -382,7 +382,7 @@ However, this has not been fully verified yet since I do not have a local setup 
 
 ✅ ローカルランタイム接続に対応  
 
-### [v4.9](https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/chirp-whisper-link%20v4.9.ipynb)  
+### [v4.9](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v4.9.ipynb)  
 
 ✅ initial_promptが空欄の場合はGeminiで自動補完  
 ✅ モデルに `auto`, `faster-distil-whisper-large-v3`, `kotoba-whisper-v2.0-faster` を追加  
