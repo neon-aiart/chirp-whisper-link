@@ -258,8 +258,7 @@ Setup is required to enable the "Pre-reading" feature using Gemini 3.5 Flash.
   * **ON**: アップロード済みの最新ファイルを再利用します  
   * **OFF**: 常に新しいファイルをアップロードします  
 * **`condition_on_previous_text`**: 前の文脈を引き継いで処理します  
-  > [!Warning] (2026年6月時点)  
-    `kotoba-whisper-v2.0-faster`を使用する際に`condition_on_previous_text`を`True`にすると、仕様変更による競合で文字起こしが正常に生成されない問題が確認されているので`False`推奨です  
+  * ⚠️ **重要 (2026年6月時点)**: `kotoba-whisper-v2.0-faster`を使用する際に`condition_on_previous_text`を`True`にすると、仕様変更による競合で文字起こしが正常に生成されない問題が確認されているので`False`推奨です  
 
 #### 🇺🇸  
 
@@ -271,9 +270,8 @@ Setup is required to enable the "Pre-reading" feature using Gemini 3.5 Flash.
 * **`execute_file_exists`** (Upload mode only):  
   * **ON**: Reuses the most recently uploaded file.  
   * **OFF**: Always prompts for a new file upload.  
-* **`condition_on_previous_text`**: Feeds the previous text as context for the next window.  
-  > [!WARNING] (As of June 2026)  
-    Using `kotoba-whisper-v2.0-faster` with `condition_on_previous_text` set to `True` causes a conflict due to internal updates, which prevents proper transcription. Setting it to `False` is highly recommended.
+* **`condition_on_previous_text`**: Feeds the previous text as context for the next window.
+  * ⚠️ **IMPORTANT (As of June 2026)**: Using `kotoba-whisper-v2.0-faster` with `condition_on_previous_text` set to `True` causes a conflict due to internal updates, which prevents proper transcription. Setting it to `False` is highly recommended.
 
 ### 📄 出力オプション (Outputs Options)  
 
