@@ -14,7 +14,7 @@ The Ultimate **AI-to-AI Hybrid Transcription** Tool! A master-class Colab notebo
 
 ## ✨ 主な特徴 / Features  
 
-### 🇯🇵
+### 🇯🇵  
 
 * **🔗 ハイブリッド・AI・ワークフロー**  
   文字起こし前に **Gemini 3.5 Flash** が音声を「下読み」し、固有名詞や専門用語を自動抽出  
@@ -36,7 +36,7 @@ The Ultimate **AI-to-AI Hybrid Transcription** Tool! A master-class Colab notebo
   処理が終わると、小鳥のさえずりのような通知音でお知らせ  
   バックグラウンドで処理をしていても、作業完了を軽やかにキャッチできます  
 
-### 🇺🇸
+### 🇺🇸  
 
 * **🔗 Hybrid AI Workflow**  
   **Gemini 3.5 Flash** "pre-reads" the audio to extract proper nouns and technical terms before transcription.  
