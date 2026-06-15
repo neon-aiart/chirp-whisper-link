@@ -485,10 +485,11 @@ Furthermore, we are actively submitting **Malware / Abuse Reports** to relevant 
 * **Executive Producer & Lead Architect**: ねおん (Neon)  
 * **Assistant & Core Developer**: Gemini  
 * **Special Thanks**:  
-  * **Ecosystem Platform**: [Gemini Canvas](https://gemini.google.com/) by Google LLC  
-  * **Core AI Engine (Text)**: [Gemini 3.5 Flash](https://ai.google.dev/) by Google LLC  
-  * **Core AI Engine (Image)**: [Imagen 4.0](https://deepmind.google/technologies/imagen/) by Google DeepMind  
-  * **Storage & Synchronization**: [Cloudflare R2](https://www.cloudflare.com/products/r2/) by Cloudflare, Inc.  
+  * **Ecosystem Platform**: [Google Colab](https://colab.research.google.com/)  
+  * **AI Core (Speech to Text)**: [faster-whisper](https://github.com/SYSTRAN/faster-whisper) by SYSTRAN  
+  * **Original Architecture**: [whisper](https://github.com/openai/whisper) by OpenAI  
+  * **Japanese Optimized Model**: [kotoba-whisper](https://huggingface.co/kotoba-tech/kotoba-whisper-v2.0-faster) by Kotoba Technologies  
+  * **Initial Prompt Assistant**: [Gemini API](https://ai.google.dev/) by Google LLC  
 
 <pre>
 <img src="https://www.google.com/s2/favicons?domain=bsky.app&size=16" alt="Bluesky icon"> Bluesky       :<a href="https://bsky.app/profile/neon-ai.art/">https://bsky.app/profile/neon-ai.art/</a>
