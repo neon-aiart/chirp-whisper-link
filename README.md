@@ -360,16 +360,14 @@ However, this has not been fully verified yet since I do not have a local setup 
 
 ## 🎨 インフォグラフィック (Infographic)  
 
-<details><summary>
-    🇯🇵 日本語版を表示 (View Japanese Version)
-</summary>
-<img src="chirp-whisper-link-info-jp.png" alt="Infographic JP" width="100%">
-</details>
+<a href="https://info-pick.neon-aiillust.workers.dev/chirp-whisper-link/purge-and-close" target="_blank" rel="noopener noreferrer">
+  <img src="https://info-pick.neon-aiillust.workers.dev/chirp-whisper-link" alt="infographic" width="100%">
+</a>
 
 <details><summary>
-    🇺🇸 English Version (View English Version)
+  🌐 Other Language Version
 </summary>
-<img src="chirp-whisper-link-info-en.png" alt="Infographic EN" width="100%">
+<img src="https://info-pick.neon-aiillust.workers.dev/chirp-whisper-link?details" alt="infographic details" width="100%">
 </details>
 
 ---
