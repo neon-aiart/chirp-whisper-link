@@ -1,6 +1,6 @@
 # 🐦 Chirp Whisper Link v5.2  
 
-<img src="https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/assets/00228-434673803.png" style="height: 200px; width: 200px; object-fit: contain;" align="right" alt="thumbnail" />  
+<img src="https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/assets/00228-434673803.png" style="height: 200px; width: 200px; object-fit: contain;" align="right" alt="thumbnail">  
 
 **AI×AIのハイブリッド文字起こしの決定版！** WhisperとGeminiを使って、専門用語も逃さず全自動で文字起こしする究極のColabノートブック  
 
