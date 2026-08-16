@@ -1,6 +1,6 @@
 # 🐦 Chirp Whisper Link v5.2  
 
-<img src="https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/00228-434673803.png" style="height: 200px; width: 200px; object-fit: contain;" align="right" alt="thumbnail" />  
+<img src="https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/assets/00228-434673803.png" style="height: 200px; width: 200px; object-fit: contain;" align="right" alt="thumbnail" />  
 
 **AI×AIのハイブリッド文字起こしの決定版！** WhisperとGeminiを使って、専門用語も逃さず全自動で文字起こしする究極のColabノートブック  
 
@@ -9,6 +9,29 @@ The Ultimate **AI-to-AI Hybrid Transcription** Tool! A master-class Colab notebo
 ⭐ [スター](https://github.com/neon-aiart/chirp-whisper-link/)をポチッとお願いします✨ (Please hit the [Star] button!)  
 
 <br clear="right">  
+
+---
+
+## 🎨 インフォグラフィック (Infographic)  
+
+<img src="https://info-pick.neon-aiillust.workers.dev/chirp-whisper-link" alt="infographic" width="100%">
+
+<details><summary>
+  🌐 Other Language Version
+</summary>
+<img src="https://info-pick.neon-aiillust.workers.dev/chirp-whisper-link?details" alt="infographic details" width="100%">
+</details>
+
+<!-- <a href="https://info-pick.neon-aiillust.workers.dev/chirp-whisper-link/purge-and-close" target="_blank" rel="noopener noreferrer">🗑️ Camo Purge</a> -->
+
+---
+
+<details>
+<summary><b>📸 スクリーンショット / Interface Screenshot</b></summary>
+<p align="center">
+  <img src="./assets/chirp-whisper-link-screenshot.png" style="width: 720px; object-fit:" alt="Interface Screenshot">
+</p>
+</details>  
 
 ---
 
@@ -111,17 +134,6 @@ Click the button below to open the script in Google Colab and start transcribing
    Go back to step 3, adjust settings, and click the play button again.  
 8. ⚠️ **Disconnect (Crucial!)**  
    Always select **"Disconnect and delete runtime"** from the menu when finished.  
-
----
-
-<details>
-<summary><b>📸 スクリーンショット / Interface Screenshot</b></summary>
-
-<p align="center">
-  <img src="chirp-whisper-link-screenshot.png" style="width: 720px; object-fit:" alt="Interface Screenshot">
-</p>
-
-</details>  
 
 ---
 
@@ -353,22 +365,12 @@ However, this has not been fully verified yet since I do not have a local setup 
 
 ### 📺 紹介動画 (Overview Video)  
 
-<p align="center"><a href="https://youtu.be/5DH67rR95xo" markdown="1">
+<p align="center">
+  <a href="https://youtu.be/5DH67rR95xo" markdown="1">
     <img src="https://img.youtube.com/vi/5DH67rR95xo/maxresdefault.jpg" alt="Chirp Whisper Link Overview" style="width:100%; max-width:600px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"><br />
     ▶️ クリックしてYouTubeで再生 (Click to play on YouTube)
-</a></p>  
-
-## 🎨 インフォグラフィック (Infographic)  
-
-<img src="https://info-pick.neon-aiillust.workers.dev/chirp-whisper-link" alt="infographic" width="100%">
-
-<details><summary>
-  🌐 Other Language Version
-</summary>
-<img src="https://info-pick.neon-aiillust.workers.dev/chirp-whisper-link?details" alt="infographic details" width="100%">
-</details>
-
-<!-- <a href="https://info-pick.neon-aiillust.workers.dev/chirp-whisper-link/purge-and-close" target="_blank" rel="noopener noreferrer">🗑️ Camo Purge</a> -->
+  </a>
+</p>  
 
 ---
 
