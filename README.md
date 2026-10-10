@@ -1,4 +1,7 @@
-# 🐦 Chirp Whisper Link v5.2  
+# 🐦 Chirp Whisper Link  
+
+[![Version](https://img.shields.io/badge/version-5.3-orange.svg)](https://github.com/neon-aiart/chirp-whisper-link)
+[![License](https://img.shields.io/badge/license-PolyForm%20Noncommercial%201.0.0-blue.svg)](https://polyformproject.org/licenses/noncommercial/1.0.0/)
 
 <img src="https://raw.githubusercontent.com/neon-aiart/chirp-whisper-link/main/assets/00228-434673803.png" style="height: 200px; width: 200px; object-fit: contain;" align="right" alt="thumbnail">  
 
@@ -6,9 +9,13 @@
 
 The Ultimate **AI-to-AI Hybrid Transcription** Tool! A master-class Colab notebook for fully automated transcription that captures every technical term using Whisper and Gemini.  
 
-⭐ [スター](https://github.com/neon-aiart/chirp-whisper-link/)をポチッとお願いします✨ (Please hit the [Star] button!)  
+⭐ [スター](https://github.com/neon-aiart/chirp-whisper-link)をポチッとお願いします✨ (Please hit the [Star] button!)  
 
-<br clear="right">  
+<a href="https://b.hatena.ne.jp/entry/panel/?url=https://github.com/neon-aiart/chirp-whisper-link"><img src="https://b.hatena.ne.jp/favicon.ico" width="20" height="20" alt="📖"></a> ポチッと[ブックマーク](https://b.hatena.ne.jp/entry/panel/?url=https://github.com/neon-aiart/chirp-whisper-link)をお願い致します✨ (Please click the [Bookmark] button!)  
+
+[🇯🇵 日本語](#-日本語-japanese) | [🇺🇸 English](#-english-英語)  
+
+<br clear="all">
 
 ---
 
@@ -35,9 +42,9 @@ The Ultimate **AI-to-AI Hybrid Transcription** Tool! A master-class Colab notebo
 
 ---
 
-## ✨ 主な特徴 / Features  
+## 🇯🇵 日本語 (Japanese)  
 
-### 🇯🇵  
+### ✨ 主な特徴  
 
 * **🔗 ハイブリッド・AI・ワークフロー**  
   文字起こし前に **Gemini 3.5 Flash** が音声を「下読み」し、固有名詞や専門用語を自動抽出  
@@ -45,7 +52,7 @@ The Ultimate **AI-to-AI Hybrid Transcription** Tool! A master-class Colab notebo
 
 * **🚀 爆速 Google Drive 連携**  
   Colabへの高速ロード＆未実行ファイルのみを自動抽出して一括処理  
-  事前のアップロードが可能作業で、読み込み時間を大幅短縮  
+  事前のアップロードが可能で、読み込み時間を大幅短縮  
 
 * **🌍 ローカライズ自動最適化**  
   ブラウザの言語を読み取り、最適なモデル（**Kotoba-Whisper** / **turbo**）を自動選択  
@@ -59,34 +66,13 @@ The Ultimate **AI-to-AI Hybrid Transcription** Tool! A master-class Colab notebo
   処理が終わると、小鳥のさえずりのような通知音でお知らせ  
   バックグラウンドで処理をしていても、作業完了を軽やかにキャッチできます  
 
-### 🇺🇸  
-
-* **🔗 Hybrid AI Workflow**  
-  **Gemini 3.5 Flash** "pre-reads" the audio to extract proper nouns and technical terms before transcription.  
-  This maximizes Whisper's performance and drastically improves the accuracy of proper noun conversion.  
-* **🚀 High-Speed Google Drive Integration**  
-  Features fast loading into Colab and automatic batch processing of unprocessed files.  
-  Pre-uploading files significantly reduces manual work and processing time.  
-* **🌍 Intelligent Localization**  
-  Automatically detects browser language to select the optimal model (**Kotoba-Whisper** or **turbo**).  
-  Time zones are also adjusted between "JST" and "UTC" based on your environment.  
-* **🔄 Smart Reloading**  
-  Automatically detects already-loaded libraries and models in memory.  
-  Skips redundant loading processes for lightning-fast task resumption.  
-* **🐤 "Chirp" Completion Sound**  
-  A cheerful bird-like notification sound alerts you when processing is complete.  
-  Easily catch the end of a task even while working in the background.  
-
 ---
 
-## 📖 使い方 / How to Use  
+### 📖 使い方  
 
 下のボタンを押してGoogle Colabで実行してください  
-Click the button below to open the script in Google Colab and start transcribing!  
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v5.2.ipynb)  
-
-### 🇯🇵
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v5.3.ipynb)  
 
 1. ⚙️ **ランタイムのタイプを変更**  
   上部メニューの「ランタイム」→「ランタイムのタイプを変更」からハードウェアを選択します  
@@ -114,7 +100,157 @@ Click the button below to open the script in Google Colab and start transcribing
 8. ⚠️ **終わったら接続解除 (ゼッタイ！)**  
   **「ランタイムを接続解除して削除」** を必ず行ってください  
 
-### 🇺🇸  
+---
+
+### 🔑 Gemini API キーの設定  
+
+Gemini 3.5 Flash による「下読み」機能を有効にするために設定が必要です  
+
+1. **APIキーを取得**: [Google AI Studio](https://aistudio.google.com/app/apikey) でキーを作成します  
+2. **Colabに登録**: 画面左側の **鍵アイコン（シークレット）** をクリック  
+3. **追加**: 名前を `GEMINI_API_KEY` とし、値を貼り付けます  
+4. **許可**: 「ノートブックからのアクセス」のチェックを **ON** にしてください  
+
+> [!TIP]  
+> APIキーがなくても動作します  
+> キーが設定されていない場合、Geminiによる抽出プロセスのみがスキップされ、通常のWhisper文字起こしとして動作します  
+
+---
+
+#### ⚠️ 無料枠での利用に関する注意  
+
+* **データの取り扱い**: 無料枠（Free Tier）でファイルをアップロードして解析する場合、**入力データが Google のモデル改善（学習）に利用される可能性**があります  
+* **機密情報の扱い**: 機密性の高い音声ファイルを扱う場合は、有料枠（Pay-as-you-go）への切り替え、またはAPIキーを設定せずに実行することを検討してください  
+
+---
+
+### 🛠️ 各モードの詳細  
+
+#### 📥 Upload Mode  
+
+* **手軽な実行**: 実行中に表示されるボタンからファイルを選択するだけ  
+* **再利用機能**: `execute_file_exists` にチェックを入れると、最後にアップロードしたファイルを再利用できます（パラメータを調整して試したい時に便利！）  
+* **自動ダウンロード**: 完了後、結果ファイル（`.srt` / `.log`）がブラウザから自動でダウンロードされます  
+
+#### ☁️ GoogleDrive Mode  
+
+* **事前準備**: 実行前に、処理したいファイルを Drive 内の指定フォルダ（初期値: `/Whisper/`）に入れておいてください  
+* **自動保存**: 生成されたファイルは、音源と同じ Drive フォルダ内に直接保存されます  
+* **一括処理**: フォルダ内の未実行ファイルのみを賢く選別して、まとめて文字起こしします  
+
+---
+
+### 📄 出力ファイル  
+
+* **字幕ファイル (`.srt`)**: 動画編集や再生プレイヤーでそのまま使える標準形式（常に生成）  
+* **議事録ログ (`.log`)**: タイムスタンプが記録された、内容確認に最適なテキスト（オプション）  
+* **プレーンテキスト (`.txt`)**: タイムスタンプなしの純粋な本文テキスト（隠しオプション）  
+
+---
+
+### ⚙️ 設定の詳細  
+
+#### 💫 モデルとプロンプト  
+
+* **`model_type`**  
+  * **`auto`**: ブラウザ言語を判定し、日本語なら `Kotoba-Whisper`、英語なら `turbo` を自動選択  
+  * **`turbo`**: 早くしてほしい時に  
+  * **`large-v3`**: ガンバってほしい時に  
+  * **`Kotoba-Whisper`**: `turbo`をベースにした高速・軽量な日本語特化モデル  
+
+* **`initial_prompt`**  
+  特定の固有名詞や専門用語の認識、句読点、漢字の変換ミスを防ぐために事前に伝えるヒント  
+  * **空欄の場合**: **Gemini 3.5 Flash** が音声を下読みし、最適なプロンプトを自動生成（APIキーが必要）  
+
+#### 🔄 動作モード  
+
+* **`mode`**:  
+  * `Upload`: パソコン内のファイルを読み込む（手軽な単発処理）  
+  * `GoogleDrive`: 指定フォルダからファイルを読み込む（大量・一括処理）  
+  * `YouTube`: (棚上げ / Shelved)  
+* **`drive_folder`**:  
+  * Google Drive内の対象フォルダ名（初期値: `Whisper`）  
+* **`execute_file_exists`** (Uploadモード専用)  
+  * **ON**: アップロード済みの最新ファイルを再利用します  
+  * **OFF**: 常に新しいファイルをアップロードします  
+* **`condition_on_previous_text`**: 前の文脈を引き継いで処理します  
+  * ⚠️ **重要 (2026年6月時点)**: `kotoba-whisper-v2.0-faster`を使用する際に`condition_on_previous_text`を`True`にすると、仕様変更による競合で文字起こしが正常に生成されない問題が確認されているので`False`推奨です  
+
+#### 📄 出力オプション  
+
+* **`records_text_download`**: タイムスタンプ付きの議事録（.log）を保存します  
+* **`drive_batch_mode`** (GoogleDriveモード専用):  
+  * `未実行のみ一括処理`: まだ `.srt` が生成されていないファイルだけを探して実行します  
+  * `最新の１件のみ`: フォルダ内の最新ファイル１つだけを処理します  
+* **`plain_text_download`** (隠しオプション): タイムスタンプなしの純粋なテキスト本文（`.txt`）を保存します  
+
+---
+
+### 🚀 効率化機能：既存ファイルの再利用  
+
+アップロード・ダウンロード済みの最新ファイルを再利用することで、パラメータ調整時の待ち時間を大幅に短縮できます  
+
+#### `mode`を`Upload`にする  
+
+* **通常**: $\text{File Upload (60s)} + \text{Whisper (120s)} = 180\text{s}$  
+* **再利用モード**: $\text{Whisper (120s)}$ only = **120s (33% OFF!)**  
+
+---
+
+### ⚠️ YouTubeモードの提供一時休止について  
+
+現在、YouTube側のセキュリティ強化（Bot検知やPO Tokenの導入）により、外部ツールからの直接ダウンロードが非常に不安定になっています  
+
+ユーザーの皆様のアカウントの安全を第一に考え、本ツールでは**YouTube URLによる直接指定機能を一時停止（Shelved）** しています  
+
+現在は以下の２つのモードが利用可能です：  
+
+- **Uploadモード**: ローカルにあるファイルを直接アップロード  
+- **GoogleDriveモード**: GoogleDrive内の指定フォルダ（デフォルトは `Whisper`）にあるファイルを利用  
+
+YouTubeの音声を文字起こししたい場合は、あらかじめご自身で音声ファイルを準備し、上記いずれかのモードでご利用ください  
+
+---
+
+### ⚠️ 注意事項  
+
+ファイルがダウンロードされたら、必ず手動で **「ランタイムを接続解除」** してください  
+接続したまま放置すると、無料枠のGPU時間がすぐになくなってしまいます  
+
+### ⚠️ ローカルでの動作について  
+
+v5.0のアップデートでコード上はローカル環境に対応したはずだけれど  
+ねおんはローカルにインストールしていないので実際の動作は未確認です  
+
+---
+
+## 🇺🇸 English （英語）  
+
+### ✨ Features  
+
+* **🔗 Hybrid AI Workflow**  
+  **Gemini 3.5 Flash** "pre-reads" the audio to extract proper nouns and technical terms before transcription.  
+  This maximizes Whisper's performance and drastically improves the accuracy of proper noun conversion.  
+* **🚀 High-Speed Google Drive Integration**  
+  Features fast loading into Colab and automatic batch processing of unprocessed files.  
+  Pre-uploading files significantly reduces manual work and processing time.  
+* **🌍 Intelligent Localization**  
+  Automatically detects browser language to select the optimal model (**Kotoba-Whisper** or **turbo**).  
+  Time zones are also adjusted between "JST" and "UTC" based on your environment.  
+* **🔄 Smart Reloading**  
+  Automatically detects already-loaded libraries and models in memory.  
+  Skips redundant loading processes for lightning-fast task resumption.  
+* **🐤 "Chirp" Completion Sound**  
+  A cheerful bird-like notification sound alerts you when processing is complete.  
+  Easily catch the end of a task even while working in the background.  
+
+---
+
+### How to Use  
+
+Click the button below to open the script in Google Colab and start transcribing!  
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v5.3.ipynb)  
 
 1. ⚙️ **Change Runtime Type**  
    Go to "Runtime" -> "Change runtime type" in the top menu and select your hardware.  
@@ -137,23 +273,9 @@ Click the button below to open the script in Google Colab and start transcribing
 
 ---
 
-## 🔑 Gemini API キーの設定 / API Key Setup  
+### 🔑 Gemini API Key Setup  
 
-Gemini 3.5 Flash による「下読み」機能を有効にするために設定が必要です  
 Setup is required to enable the "Pre-reading" feature using Gemini 3.5 Flash.  
-
-### 🇯🇵  
-
-1. **APIキーを取得**: [Google AI Studio](https://aistudio.google.com/app/apikey) でキーを作成します  
-2. **Colabに登録**: 画面左側の **鍵アイコン（シークレット）** をクリック  
-3. **追加**: 名前を `GEMINI_API_KEY` とし、値を貼り付けます  
-4. **許可**: 「ノートブックからのアクセス」のチェックを **ON** にしてください  
-
-> [!TIP]  
-> APIキーがなくても動作します  
-> キーが設定されていない場合、Geminiによる抽出プロセスのみがスキップされ、通常のWhisper文字起こしとして動作します  
-
-### 🇺🇸  
 
 1. **Get API Key**: Create your key at [Google AI Studio](https://aistudio.google.com/app/apikey).  
 2. **Register in Colab**: Click the **Key icon (Secrets)** on the left sidebar.  
@@ -166,45 +288,22 @@ Setup is required to enable the "Pre-reading" feature using Gemini 3.5 Flash.
 
 ---
 
-### ⚠️ 無料枠での利用に関する注意 / Precautions (Free Tier)  
-
-#### 🇯🇵  
-
-* **データの取り扱い**: 無料枠（Free Tier）でファイルをアップロードして解析する場合、**入力データが Google のモデル改善（学習）に利用される可能性**があります  
-* **機密情報の扱い**: 機密性の高い音声ファイルを扱う場合は、有料枠（Pay-as-you-go）への切り替え、またはAPIキーを設定せずに実行することを検討してください  
-
-#### 🇺🇸  
+#### ⚠️ Precautions (Free Tier)  
 
 * **Data Privacy**: When using the Free Tier, **your input data may be used by Google to improve their models (training)**.  
 * **Sensitive Information**: For highly confidential audio, consider switching to the Pay-as-you-go tier or running the tool without an API key.  
 
 ---
 
-## 🛠️ 各モードの詳細 / Mode Details  
+### 🛠️ Mode Details  
 
-### 📥 Upload Mode  
-
-#### 🇯🇵  
-
-* **手軽な実行**: 実行中に表示されるボタンからファイルを選択するだけ  
-* **再利用機能**: `execute_file_exists` にチェックを入れると、最後にアップロードしたファイルを再利用できます（パラメータを調整して試したい時に便利！）  
-* **自動ダウンロード**: 完了後、結果ファイル（`.srt` / `.log`）がブラウザから自動でダウンロードされます  
-
-#### 🇺🇸  
+#### 📥 Upload Mode  
 
 * **Easy Execution**: Simply select your file using the button that appears during execution.  
 * **Reuse Feature**: Checking `execute_file_exists` allows you to reuse the last uploaded file (useful for fine-tuning parameters!).  
 * **Auto-Download**: Result files (`.srt` / `.log`) are automatically downloaded to your browser upon completion.  
 
-### ☁️ GoogleDrive Mode  
-
-#### 🇯🇵  
-
-* **事前準備**: 実行前に、処理したいファイルを Drive 内の指定フォルダ（初期値: `/Whisper/`）に入れておいてください  
-* **自動保存**: 生成されたファイルは、音源と同じ Drive フォルダ内に直接保存されます  
-* **一括処理**: フォルダ内の未実行ファイルのみを賢く選別して、まとめて文字起こしします  
-
-#### 🇺🇸  
+#### ☁️ GoogleDrive Mode  
 
 * **Preparation**: Before running, place your audio files in the designated Drive folder (default: `/Whisper/`).  
 * **Auto-Save**: Generated files are saved directly in the same Drive folder as the source audio.  
@@ -212,15 +311,7 @@ Setup is required to enable the "Pre-reading" feature using Gemini 3.5 Flash.
 
 ---
 
-## 📄 出力ファイル / Outputs  
-
-### 🇯🇵  
-
-* **字幕ファイル (`.srt`)**: 動画編集や再生プレイヤーでそのまま使える標準形式（常に生成）  
-* **議事録ログ (`.log`)**: タイムスタンプが記録された、内容確認に最適なテキスト（オプション）  
-* **プレーンテキスト (`.txt`)**: タイムスタンプなしの純粋な本文テキスト（隠しオプション）  
-
-### 🇺🇸  
+### 📄 Outputs  
 
 * **Subtitle File (`.srt`)**: Standard format for video editing and players (always generated).  
 * **Transcription Log (`.log`)**: Text with timestamps, ideal for reviewing content (optional).  
@@ -228,23 +319,9 @@ Setup is required to enable the "Pre-reading" feature using Gemini 3.5 Flash.
 
 ---
 
-## ⚙️ 設定の詳細 / Parameter Details  
+### ⚙️ Parameter Details  
 
-### 💫 モデルとプロンプト (Model & Prompt)  
-
-#### 🇯🇵  
-
-* **`model_type`**  
-  * **`auto`**: ブラウザ言語を判定し、日本語なら `Kotoba-Whisper`、英語なら `turbo` を自動選択  
-  * **`turbo`**: 早くしてほしい時に  
-  * **`large-v3`**: ガンバってほしい時に  
-  * **`Kotoba-Whisper`**: `turbo`をベースにした高速・軽量な日本語特化モデル  
-
-* **`initial_prompt`**  
-  特定の固有名詞や専門用語の認識、句読点、漢字の変換ミスを防ぐために事前に伝えるヒント  
-  * **空欄の場合**: **Gemini 3.5 Flash** が音声を下読みし、最適なプロンプトを自動生成（APIキーが必要）  
-
-#### 🇺🇸  
+#### 💫 Model & Prompt  
 
 * **`model_type`**  
   * **`auto`**: Detects browser language. Selects `Kotoba-Whisper` for Japanese and `turbo` for English.  
@@ -256,28 +333,12 @@ Setup is required to enable the "Pre-reading" feature using Gemini 3.5 Flash.
   A prompt provided in advance to improve recognition of proper nouns, technical terms, and punctuation.  
   * **If empty**: **Gemini 3.5 Flash** analyzes the audio and automatically generates the optimal prompt (Requires API key).  
 
-### 🔄 動作モード (Mode)  
-
-#### 🇯🇵  
-
-* **`mode`**:  
-  * `Upload`: パソコン内のファイルを読み込む（手軽な単発処理）  
-  * `GoogleDrive`: 指定フォルダからファイルを読み込む（大量・一括処理）  
-  * `YouTube`: (棚上げ)
-* **`drive_folder`**:  
-  * Google Drive内の対象フォルダ名（初期値: `Whisper`）  
-* **`execute_file_exists`** (Uploadモード専用)  
-  * **ON**: アップロード済みの最新ファイルを再利用します  
-  * **OFF**: 常に新しいファイルをアップロードします  
-* **`condition_on_previous_text`**: 前の文脈を引き継いで処理します  
-  * ⚠️ **重要 (2026年6月時点)**: `kotoba-whisper-v2.0-faster`を使用する際に`condition_on_previous_text`を`True`にすると、仕様変更による競合で文字起こしが正常に生成されない問題が確認されているので`False`推奨です  
-
-#### 🇺🇸  
+#### 🔄 Mode  
 
 * **`mode`**:  
   * `Upload`: Process files from your computer (Single task).  
   * `GoogleDrive`: Process files from a specific folder (Bulk/Batch task).  
-  * `YouTube`: (shelved)  
+  * `YouTube`: (Shelved)  
 * **`drive_folder`**: The target folder name in Google Drive (Default: `Whisper`).  
 * **`execute_file_exists`** (Upload mode only):  
   * **ON**: Reuses the most recently uploaded file.  
@@ -285,17 +346,7 @@ Setup is required to enable the "Pre-reading" feature using Gemini 3.5 Flash.
 * **`condition_on_previous_text`**: Feeds the previous text as context for the next window.
   * ⚠️ **IMPORTANT (As of June 2026)**: Using `kotoba-whisper-v2.0-faster` with `condition_on_previous_text` set to `True` causes a conflict due to internal updates, which prevents proper transcription. Setting it to `False` is highly recommended.  
 
-### 📄 出力オプション (Outputs Options)  
-
-#### 🇯🇵  
-
-* **`records_text_download`**: タイムスタンプ付きの議事録（.log）を保存します  
-* **`drive_batch_mode`** (GoogleDriveモード専用):  
-  * `未実行のみ一括処理`: まだ `.srt` が生成されていないファイルだけを探して実行します  
-  * `最新の１件のみ`: フォルダ内の最新ファイル１つだけを処理します  
-* **`plain_text_download`** (隠しオプション): タイムスタンプなしの純粋なテキスト本文（`.txt`）を保存します  
-
-#### 🇺🇸  
+#### 📄 Outputs Options  
 
 * **`records_text_download`**: Saves a transcription log with timestamps (`.log`).  
 * **`drive_batch_mode`** (GoogleDrive mode only):  
@@ -305,32 +356,18 @@ Setup is required to enable the "Pre-reading" feature using Gemini 3.5 Flash.
 
 ---
 
-### 🚀 効率化機能：既存ファイルの再利用 / Optimization: Reusing Existing Files  
+### 🚀 Optimization: Reusing Existing Files  
 
-アップロード・ダウンロード済みの最新ファイルを再利用することで、パラメータ調整時の待ち時間を大幅に短縮できます  
 Reuse the most recently uploaded or downloaded file to significantly reduce wait times during parameter tuning.  
 
-#### `mode`を`Upload`にする (switching `mode` to `Upload`)  
+#### Switching `mode` to `Upload`  
 
-* **通常(Standard)**: $\text{File Upload (60s)} + \text{Whisper (120s)} = 180\text{s}$  
-* **再利用モード(Reuse)**: $\text{Whisper (120s)}$ only = **120s (33% OFF!)**  
+* **Standard**: $\text{File Upload (60s)} + \text{Whisper (120s)} = 180\text{s}$  
+* **Reuse**: $\text{Whisper (120s)}$ only = **120s (33% OFF!)**  
 
 ---
 
-## ⚠️ YouTubeモードの提供一時休止について  
-
-現在、YouTube側のセキュリティ強化（Bot検知やPO Tokenの導入）により、外部ツールからの直接ダウンロードが非常に不安定になっています  
-
-ユーザーの皆様のアカウントの安全を第一に考え、本ツールでは**YouTube URLによる直接指定機能を一時停止（Shelved）** しています  
-
-現在は以下の２つのモードが利用可能です：  
-
-- **Uploadモード**: ローカルにあるファイルを直接アップロード  
-- **GoogleDriveモード**: GoogleDrive内の指定フォルダ（デフォルトは `Whisper`）にあるファイルを利用  
-
-YouTubeの音声を文字起こししたい場合は、あらかじめご自身で音声ファイルを準備し、上記いずれかのモードでご利用ください  
-
-## ⚠️ Regarding the Temporary Suspension of YouTube Mode  
+### ⚠️ Regarding the Temporary Suspension of YouTube Mode  
 
 Due to enhanced YouTube security measures (Bot detection, PO Tokens, etc.), direct downloads via external tools are currently unstable.  
 
@@ -345,21 +382,15 @@ If you wish to transcribe YouTube content, please prepare the audio file in adva
 
 ---
 
-## ⚠️ 注意事項 / Important  
-
-ファイルがダウンロードされたら、必ず手動で **「ランタイムを接続解除」** してください  
-接続したまま放置すると、無料枠のGPU時間がすぐになくなってしまいます  
+### ⚠️ Important  
 
 Please remember to **"Disconnect and delete runtime"** manually after use.  
 Leaving it connected will exhaust your remaining GPU time.  
 
-## ⚠️ ローカルでの動作について / Local Environment Support  
-
-v5.0のアップデートでコード上はローカル環境に対応したはずだけれど  
-ねおんはローカルにインストールしていないので実際の動作は未確認です  
+### ⚠️ Local Environment Support  
 
 As of v5.0, the codebase has been updated to support local environments.  
-However, this has not been fully verified yet since I do not have a local setup installed.
+However, this has not been fully verified yet since I do not have a local setup installed.  
 
 ---
 
@@ -376,7 +407,16 @@ However, this has not been fully verified yet since I do not have a local setup 
 
 ## 📝 更新履歴 (Changelog)  
 
-### [v5.2](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v5.2.ipynb) (Current Release)  
+### [v5.3](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v5.3.ipynb) (Current Release)  
+
+✅ `kotoba-whisper-v2.0-faster`で文字起こしできなくなっていたのを修正  
+✅ `condition_on_previous_text`を固定からチェックボックスにして`False`に変更  
+✅ **Google Colab (Python 3.13) 互換性対応**:  
+&emsp; ☑️ PyAV v12以降で発生する `metadata_errors` エラーの回避パッチを適用  
+&emsp; ☑️ `libcublas.so.12` が読み込めず文字起こしが停止する問題を `ctypes` の事前ロード処理により修正  
+&emsp; ☑️ パッケージ依存関係の整理と最適化  
+
+### [v5.2](https://colab.research.google.com/github/neon-aiart/chirp-whisper-link/blob/main/chirp-whisper-link%20v5.2.ipynb)  
 
 ✅ `kotoba-whisper-v2.0-faster`で文字起こしできなくなっていたのを修正  
 ✅ `condition_on_previous_text`を固定からチェックボックスにして`False`に変更  
@@ -387,7 +427,7 @@ However, this has not been fully verified yet since I do not have a local setup 
 ✅ `gemini-3-flash-preview`から`gemini-3.5-flash`に変更  
 ☑️ モデルから `faster-distil-whisper-large-v3` を削除  
 
-### v5.0 (Unrelease)  
+### v5.0 (Unreleased)  
 
 ✅ ローカルランタイム接続に対応  
 
@@ -499,6 +539,7 @@ Furthermore, we are actively submitting **Malware / Abuse Reports** to relevant 
 <img src="https://www.google.com/s2/favicons?domain=zenn.dev&size=16" alt="Sizu icon"> Zenn Dev      :<a href="https://zenn.dev/neon_aiart/">https://zenn.dev/neon_aiart/</a>
 <img src="https://www.google.com/s2/favicons?domain=sizu.me&size=16" alt="Sizu icon"> Sizu Diary    :<a href="https://sizu.me/neon_aiart/">https://sizu.me/neon_aiart/</a>
 <img src="https://www.google.com/s2/favicons?domain=ofuse.me&size=16" alt="Ofuse icon"> OFUSE         :<a href="https://ofuse.me/neon/">https://ofuse.me/neon/</a>
+<img src="https://www.google.com/s2/favicons?domain=artria-ai.com&size=16" alt="Artrla icon"> ArtrIa        :<a href="https://neon.artria-ai.com/">https://neon.artria-ai.com/</a>
 <img src="https://www.google.com/s2/favicons?domain=www.chichi-pui.com&size=16" alt="chichi-pui icon"> chichi-pui    :<a href="https://www.chichi-pui.com/users/neon/">https://www.chichi-pui.com/users/neon/</a>
 <img src="https://www.google.com/s2/favicons?domain=iromirai.jp&size=16" alt="iromirai icon"> IROMIRAI      :<a href="https://iromirai.jp/creators/neon/">https://iromirai.jp/creators/neon/</a>
 <img src="https://www.google.com/s2/favicons?domain=www.days-ai.com&size=16" alt="DaysAI icon"> DaysAI        :<a href="https://www.days-ai.com/users/lxeJbaVeYBCUx11QXOee/">https://www.days-ai.com/users/lxeJbaVeYBCUx11QXOee/</a>
